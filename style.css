@@ -1,0 +1,276 @@
+body{
+    margin: 0;
+    background: hsla(233, 43%, 23%, 1);
+
+    background: radial-gradient(circle, hsla(233, 43%, 23%, 1) 0%, hsla(258, 100%, 6%, 1) 100%);
+    
+    background: -moz-radial-gradient(circle, hsla(233, 43%, 23%, 1) 0%, hsla(258, 100%, 6%, 1) 100%);
+    
+    background: -webkit-radial-gradient(circle, hsla(233, 43%, 23%, 1) 0%, hsla(258, 100%, 6%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#212753", endColorstr="#09001E", GradientType=1 );
+
+
+nav.nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.contrast-bar {
+    width: 30%;
+    height: 50px;
+    background-color: #00000081; /* Color de fondo de la barra de contraste */
+    position: fixed;
+    top: 8px; /* Altura de la barra de navegación fija */
+    left:35%;
+    display: none; /* Inicialmente oculta */
+    z-index: 900; /* Asegura que esté debajo de la barra de navegación */
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 20px;
+    
+    backdrop-filter: blur(3px);
+    
+}
+
+.nav-a:hover{
+    color:rgb(175, 219, 15);
+}
+
+ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 50px
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+
+}
+
+
+ header{
+    
+    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin-bottom: 0%;
+        margin: 0;
+        transition: filter 0.3s ease, transform 0.3s ease; /* Transiciones para ambos estados */
+        }
+        
+    }
+    h1:hover + p.title{
+
+        filter: drop-shadow(0 0 0.75rem #000000);
+        transform: scale(1.2); /* Zoom del 20% */
+            transition: filter 0.3s ease, transform 1s ease; /* Transición para ambas propiedades */
+        }
+    p.title{
+        transition: filter 0.3s ease, transform 0.3s ease; /* Transiciones para ambos estados */
+        margin-top: 0px;
+        filter: drop-shadow(0 0 0.75rem #0314fd);
+    }
+
+}
+
+.rectangle-description{
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.034), rgba(0, 0, 0, 0)), /* Desvanecimiento desde abajo */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.055), rgba(0, 0, 0, 0)); /* Desvanecimiento desde arriba */
+background-position: center top, center bottom;
+background-repeat: no-repeat;
+background-size: 100% 100%; /* Controla la altura del desvanecimiento */
+    height: 30vh;
+}
+article{
+    padding: 15px;
+}
+.description{
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+.img-profile {
+    border-radius: 60%;
+}
+
+
+
+
+p.biography{
+    color: rgb(179, 172, 172);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    width: 40%; /* Ancho del párrafo */
+    margin: 3% 20px;
+}
+.social{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+
+
+
+.button-social{
+    margin: 0 10px;
+    font-size: 14px;
+    color: white;
+    background: linear-gradient(145deg, #09ff006b, #5eeb0c6b),
+    linear-gradient(145deg, #0000006b, #0cb7eb6b) border-box;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    width: 100px;
+    
+
+
+}
+
+
+
+.icon-social{
+    
+    margin-right: 9px;
+}
+.skills {
+    text-align: center;
+}
+.skills-1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.skill{
+    
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.skill{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.img{
+    animation-duration: 2s;
+    animation-name: alternate;
+}
+
+@keyframes alternate {
+    from {
+      margin-top: 100%;
+      width: 200%;
+    }
+
+
+to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+h2{
+    
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+}
+/* Añade una clase para la animación */
+.biography, .skill, .img {
+    opacity: 0;
+    transform: translateY(20px); /* Para las skills y las imágenes */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.biography.animate, .skill.animate, .img.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.projects{
+    
+    margin-top: 150px;
+    text-align: center;
+    height: 60vh;
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), /* Desvanecimiento desde abajo */
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /* Desvanecimiento desde arriba */
+    background-size: 100% 100%; /* Controla la altura del desvanecimiento */
+}
+
+.projects-1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 10px;
+    .img-project:hover{
+        transform: scale(1.1); /* Zoom del 20% */
+        transition: transform 1s ease; /* Transición para ambas propiedades */
+        
+    }
+    .img-project{
+        
+        transition: filter 0.3s ease, transform 1s ease;
+    }
+    }
+
+
+.img-project{
+    border-radius: 10%;
+}
+
+.description-project{
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    display: block;
+}
